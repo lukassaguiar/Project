@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0; /*é responsável por definir uma distância interna entre um elemento e sua borda*/
+  box-sizing: border-box; /*todos os elementos vão receber o box sizing*/
+}
+:root {
+  --text-color: white; /*ROOT substitui as funções por variações/text color vira uma variação para substituir as cores*/
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --cor-borda: rgba(255, 255, 255, 0.5); /*stroke color*/
+  --fundo-borda: rgba(255, 255, 255, 0.5); /*surface color*/
+  --mouse-borda: rgba(255, 255, 255, 0.02); /*surface color hover*/
+  --redes-sociais: rgba(255, 255, 255, 0.2); /*highlight color*/
+  --botao: url(/assets/moonstars.svg);
+}
+
+.light {
+  --text-color: black; /*a class light junto com o text color */
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --cor-borda: rgba(0, 0, 0, 0.5);
+  --fundo-borda: rgba(0, 0, 0, 0.05);
+  --mouse-borda: rgba(0, 0, 0, 0.02);
+  --redes-sociais: rgba(0, 0, 0, 0.1);
+  --botao: url(/assets/sun1.svg);
+}
+
+body {
+  background-image: var(--bg-url); /*repete muito*/
+  background-repeat: no-repeat; /*aqui é para não repetir*/
+  background-position: top center; /*aqui centralizou */
+  background-size: cover; /* aqui acertou para mobile e navegador*/
+}
+
+body * {
+  /*body asterisco significa que ele apresentara para todo o conteudo dentro dele*/
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+#container {
+  /*border: 1px solid red; // BORDAS PARA IDENTIFICAR A CAIXA IMPORTANTISSIMO*/
+  /*height: 712px;  altura e tamanho*/
+  width: 360px; /* largura e tamanho*/
+  margin: auto; /* ele centraliza ao meio */
+  /*margin-top: 56px auto 0px;*/
+  padding: 0 24px;
+}
+/*perfil*/
+#perfil {
+  text-align: center;
+  padding: 24px;
+}
+
+#perfil img {
+  width: 112px;
+
+}
+
+#perfil {
+  font-weight: 500; /*peso de 500 um pouco mais de negrito*/
+  line-height: 24px; /*altura da linha*/
+  margin-top: 8px;
+}
+/*switch/trocar = botão */
+
+#switch {
+  /*border: 1px solid red;*/
+  position: relative; /* ela vai relativizar o absoluto/arrumar/regularizar*/
+  width: 64px;
+  margin: 0 auto;
+  margin: 4px auto; /*switch centraliza dessa forma/// AUTOMATIZAÇÃO DAS BORDAS LATERAIS*/
+}
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--botao) no-repeat center; /*background centraliza com center*/
+  border: 0;
+  border-radius: 50%; /*border radius deixa o icone redondo.*/
+  position: absolute; /*position absolute ele faz uma sobreposição de camadas*/
+  top: 50%; /*colocou o botão 50% pra baixo*/
+  z-index: 1; /* z-index sobe um andar/camada*/
+  transform: translateY(
+    -50%
+  ); /*colocou o botão 50% pra cima///POSITION ABSOLUTE CENTRALIZA DESSA FORMA*/
+}
+
+.light #switch button {
+  /*aqui o botão mexe pro lado e pro outro*/
+  right: 0;
+  left: initial; /*initial = volta pra sua maneira inicial*/
+}
+
+#switch span {
+  /*span tem display inline/alterar para display block*/
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--fundo-borda);
+  border: 1px solid var(--cor-borda);
+  backdrop-filter: blur(4px); /*suporte para os brownsers*/
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/* links */
+ul {
+  list-style: none; /* none quer dizer nenhum/ o list style tira os pontinhos*/
+  display: flex; /* o flex trabalha trabalha com os elementos dentro da caixa, deixando um do lado do outro */
+  flex-direction: column;
+  gap: 16px; /* gap coloca espaçamento entre os elementos, entre as linhas, entre as colunas.*/
+  padding: 24px 0;
+}
+
+ul li a {
+  /* UL LI A (as variações do HTML)
+  o elemento "a" que poderia ser usado dentro do ul li só contorna o conteudo e não a caixa em si.*/
+  border: 1px solid var(--cor-borda); /* borda pra definir o que você vai fazer*/
+  display: flex; /*Daria pra colocar um display: block e após o text-aligh; center*/
+  justify-content: center; /*alinha ao meio, centraliza*/
+
+  padding: 16px 24px; /*padding é responsável por definir uma distância interna entre um elemento e sua borda*/
+
+  background: color var(--fundo-borda); /*red gren blue alpha*/
+
+  border-radius: 8px; /*arrendodamento de borda de pixels das colunas*/
+
+  backdrop-filter: blur(
+    4px
+  ); /*suporte para os brownsers/pesquisar por Can l use para ver as versões dos navegadores que aceitam*/
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none; /*text decoration é para tirar a linha debaixo da frase* none tira, overline alinha fica acima, linha em baixo da frase underline*/
+  font-weight: 500; /*fonte acima de 500 é o bolde*/
+
+  transition: background-color 0.3s; /* faz uma transição em tudo, pode usar o all também ou alguma variação em específico.*/
+}
+
+/*pseudo-selector = :hover (aplicamos o efeito do mouse/// qnd passamos o mouse em cima das bordas)*/
+ul li a:hover {
+  background-color: var(--mouse-borda);
+  border: 1.5px solid var(--text-color);
+}
+/*redes-sociais*/
+#redes-sociais {
+  display: flex;
+  padding: 24px 0;
+  font-size: 24px;
+  justify-content: center;
+}
+
+#redes-sociais a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 50%; /*ficou uma bolinha nos icones*/
+}
+
+#redes-sociais a:hover {
+  background: var(--redes-sociais);
+  transition: background 0.2s;
+}
+footer {
+  padding: 24px;
+  text-align: center; /*textos alinhados ao centro*/
+}

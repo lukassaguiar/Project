@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br" class=""> <!--classe light serve pra definir variaveis no css/se tirar o light a pagina fica preto se colocar fica branca-->
+  <head> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-compartible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portifólio</title> <!-- //titulo do projeto-->
+    <link rel="stylesheet" href="style.css" /> <!--Conectando o CSS com o HTML-->
+  </head>
+  <body> <!--corpo do projeto-->
+    <div id="container"> <!--DIV é uma caixa genérica/Quando insere o # ele copia a DIV de cima./CONTAINER=RECIPIENTE-->
+      <div id="perfil"> <!-- id identificador onde o css vai buscar no CSS-->
+        <img src="assets/avatar.png" alt=""/>
+        <p>@lukassaguiar</p>
+      </div>
+      <div id="switch" onclick="toggleMode()"> <!--switch quer dizer trocar//onclick perceber e vai procurar no JS essa função/ "togglemode" adicionar ou remover elements ex: (light/dark)-->
+        <button>
+        </button>
+        <span></span>
+      </div>
+      <ul> <!--Cria lista não ordenada só os pontinhos-->
+      <li> <!--Cria uma lista numerada, ordenada.-->
+        <a href="#">Conheça meu Git Hub</a> <!-- As # é pra você inserir a URL.-->
+      </li>
+      <li>
+        <a href="https://wa.me/11988825964">Whatsapp</a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/lukassaguiar">Instagram</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/lukassaguiar/">Conheça o meu Linkedin</a>
+      </li>
+    </ul>
+    <div id="redes-sociais"> <!--*escrever div# e colocar o nome da sua div que já vai automatico *-->
+      <a href="https://github.com/lukassaguiar" target="_blank"> <!--target serve pra qnd clicar no link não sair da pagina, abre uma nova aba-->
+        <ion-icon name="logo-github"></ion-icon> <!--ADICIONAR ICONES-->
+      </a>
+      <a href="https://wa.me/11988825964" target="_blank">
+        <ion-icon name="logo-whatsapp"></ion-icon></a> 
+      <a href="https://instagram.com/lukassaguiar" target="_blank">
+        <ion-icon name="logo-instagram"></ion-icon></a>
+      <a href="https://www.linkedin.com/in/lukassaguiar/" target="_blank">  
+        <ion-icon name="logo-linkedin"></ion-icon></a>
+      
+    </div>
+    <div>
+      <footer> <!--TAG PARA CRIAR O RODAPÉ DO SITE-->
+        Feito pela rockeseat ❤️ <a href="https://www.rocketseat.com.br/" target="_blank">rockeseat</a> 
+      </footer>
+    </div>
+    <!--ABAIXO COMANDO PARA INSERIR ICONES./https://ionic.io/ionicons/-->
+    <script 
+      type="module" 
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+      </script> 
+    <script
+      nomodule 
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"> 
+      </script>
+    <script src="/script.js"></script>
+  </body>
+</html>
