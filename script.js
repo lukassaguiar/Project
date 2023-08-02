@@ -12,14 +12,7 @@ function toggleMode() {
   // }
   html.classList.toggle("light")
   //--------------------------------------------------------------------------------------------
-  // pegar a tag img / QUERYSELECTOR é uma função do documment = pesquisa seletor
   const img = document.querySelector("#perfil img")
-  // substituir a imagem
-  // if (html.classList.contains("light")) {
-  // img.setAttribute("src", "./assets/avatar-light.png")
-  // se tiver sem light mode, adicionar a imagem normal
-  //} else {
-  //img.setAttribute("src", "./assets/avatar.png")
-  // se tiver light mode, adicionar imagem light
-  //}
+  // pegar a tag img / QUERYSELECTOR é uma função do documment = pesquisa seletor
+  
 }

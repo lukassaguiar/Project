@@ -52,7 +52,6 @@ body * {
 
 #perfil img {
   width: 112px;
-
 }
 
 #perfil {
@@ -81,12 +80,18 @@ body * {
   transform: translateY(
     -50%
   ); /*colocou o botão 50% pra cima///POSITION ABSOLUTE CENTRALIZA DESSA FORMA*/
+  animation: slide-back 0.2s;
 }
 
 .light #switch button {
   /*aqui o botão mexe pro lado e pro outro*/
-  right: 0;
-  left: initial; /*initial = volta pra sua maneira inicial*/
+  /*right: 0;
+  left: initial; /initial = volta pra sua maneira inicial*/
+  animation: slide-in 0.4s forwards; /*forwards mantem as propriedades do começo da animação*/
+}
+
+#switch button:hover {
+  outline: 8px solid var(--redes-sociais);
 }
 
 #switch span {
@@ -161,4 +166,32 @@ ul li a:hover {
 footer {
   padding: 24px;
   text-align: center; /*textos alinhados ao centro*/
+}
+/* media querius*/
+/*@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.png);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.png);
+  
+} */
+
+/*animações - slide in/slide de entrada, arrastar o botão  suavemente*/
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
