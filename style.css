@@ -38,7 +38,8 @@ body * {
 #container {
   /*border: 1px solid red; // BORDAS PARA IDENTIFICAR A CAIXA IMPORTANTISSIMO*/
   /*height: 712px;  altura e tamanho*/
-  width: 360px; /* largura e tamanho*/
+  width: 100%; /* largura e tamanho*/
+  max-width: 588px;
   margin: auto; /* ele centraliza ao meio */
   /*margin-top: 56px auto 0px;*/
   padding: 0 24px;
